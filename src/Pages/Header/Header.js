@@ -10,7 +10,15 @@ const Header = () => {
         <div>
             <Navbar bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="/">Speakizy Academy</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <Image
+                            src="/logo.svg"
+                            width="30"
+                            height="30"
+
+                        />
+                    </Navbar.Brand>
+                    <Navbar.Brand href="/" className='fs-3'>Speakizy Academy</Navbar.Brand>
 
                     <Nav className="me-auto">
                         <Nav.Link><Link to={'/'} style={{ textDecoration: 'none' }}>Home</Link></Nav.Link>

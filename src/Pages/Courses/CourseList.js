@@ -3,20 +3,22 @@ import { Link } from 'react-router-dom';
 
 
 const CourseList = () => {
-    const [list, setList] = useState([]);
+    const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/course-list')
+        fetch('http://localhost:5000/courses')
             .then(res => res.json())
-            .then(data => setList(data))
+            .then(data => setCourses(data))
     }, [])
     return (
         <div>
-            <h4>All Language Courses {list.length}</h4>
+            <h3>Courses {courses.length}</h3>
             <div>
                 {
-                    list.map(list => <p key={list.id}>
-                        <Link>{list.name}</Link>
+                    courses.map(course => <p key={course._id} course={course}>
+                        <div className=''>
+                            <Link to={`/courses/${course._id}`} style={{ textDecoration: 'none' }}>{course.name}</Link>
+                        </div>
                     </p>)
                 }
             </div>
