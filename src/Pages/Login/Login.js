@@ -10,7 +10,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
     const [error, setError] = useState('');
 
-    const { signIn, providerLogin } = useContext(AuthContext)
+    const { signIn, providerLogin, setLoading } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -45,15 +45,17 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 form.reset();
-                setError('')
+                setError('');
                 navigate(from, { replace: true });
             })
             .catch(error => {
                 console.error(error)
-                setError(error.message)
-            });
+                setError(error.message);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
     }
 
 

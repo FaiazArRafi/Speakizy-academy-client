@@ -21,7 +21,7 @@ const Header = () => {
         <div>
             <Navbar bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="">
                         <Image
                             src="https://api.nuget.org/v3-flatcontainer/multiple.languages.translate.text.api/1.0.0/icon"
                             width="35"
@@ -29,35 +29,35 @@ const Header = () => {
 
                         />
                     </Navbar.Brand>
-                    <Navbar.Brand href="/" className='fs-3'>Speakizy Academy</Navbar.Brand>
+                    <Navbar.Brand href="/" className='fs-3 fw-bolder'>Speakizy Academy</Navbar.Brand>
 
                     <Nav className="me-auto">
-                        <Nav.Link><Link to={'/'} style={{ textDecoration: 'none' }}>Home</Link></Nav.Link>
-                        <Nav.Link><Link to={'/courses'} style={{ textDecoration: 'none' }}>Courses</Link></Nav.Link>
-                        <Nav.Link><Link to={'/FAQ'} style={{ textDecoration: 'none' }}>FAQ</Link></Nav.Link>
-                        <Nav.Link><Link to={'/blog'} style={{ textDecoration: 'none' }}>Blog</Link></Nav.Link>
+                        <Link to={'/'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>Home</Link>
+                        <Link to={'/courses'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>Courses</Link>
+                        <Link to={'/FAQ'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>FAQ</Link>
+                        <Link to={'/blog'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>Blog</Link>
 
-                        <div className="form-check form-switch form-check-reverse mt-2 ms-2">
+                        <p className="form-check form-switch form-check-reverse mt-2 ms-3">
                             <input className="form-check-input" type="checkbox" id="flexSwitchCheckReverse" />
                             <label className="form-check-label" htmlFor="flexSwitchCheckReverse"> Light / Dark</label>
-                        </div>
+                        </p>
 
                     </Nav>
                     <Nav className='d-flex flex-row justify-content-start'>
-                        <Nav.Link href="#deets">
-                            {
-                                user?.uid ?
-                                    <>
-                                        <span>{user?.displayName}</span>
-                                        <Button variant="info" onClick={handleLogOut}>Log Out</Button>
-                                    </>
-                                    :
-                                    <>
-                                        <Link to={'/login'} className='me-2 p-2 b' style={{ textDecoration: 'none' }}>Login</Link>
-                                        <Link to={'/register'} style={{ textDecoration: 'none' }}>Register</Link>
-                                    </>
-                            }
-                        </Nav.Link>
+
+                        {
+                            user?.uid ?
+                                <>
+                                    <span>{user?.displayName}</span>
+                                    <Button variant="info" onClick={handleLogOut}>Log Out</Button>
+                                </>
+                                :
+                                <>
+                                    <Link to={'/login'} className='me-2 p-2 py-2 px-4 rounded-3 bg-primary text-white fw-bold' style={{ textDecoration: 'none' }}>Login</Link>
+                                    <Link to={'/register'} className='me-2 p-2 py-2 px-4 rounded-3 bg-primary text-white fw-bold' style={{ textDecoration: 'none' }}>Register</Link>
+                                </>
+                        }
+
 
                         <Nav.Link eventKey={2} href="#memes">
                             {user?.photoURL ?

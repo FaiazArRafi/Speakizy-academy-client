@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
 
     const course = useLoaderData();
-    const { title, details, image_url } = course;
+    const { title, details, image_url, _id } = course;
     return (
         <div>
             <Card>
@@ -15,7 +15,7 @@ const CourseDetails = () => {
                     <Card.Text>
                         {details}
                     </Card.Text>
-
+                    <Link to={`/checkout/${_id}`} className='bg-warning px-5 py-3 rounded  fw-bolder' style={{ textDecoration: 'none' }} >Get Premium Access</Link>
                 </Card.Body>
             </Card>
         </div>
