@@ -42,8 +42,9 @@ const Register = () => {
 
 
     return (
-        <div className='container'>
-            <Form onSubmit={handleSubmit}>
+        <div className='container w-50 px-5 py-4 mt-3 text-white rounded bg-success bg-lighten-sm'>
+            <h1 className='mb-4'>Please, Register</h1>
+            <Form onSubmit={handleSubmit} className='w-75 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control name='name' type="text" placeholder="Enter name" />
@@ -54,17 +55,17 @@ const Register = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control name='email' type="email" placeholder="Enter email" />
+                    <Form.Control name='email' type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control name='password' type="password" placeholder="Password" />
+                    <Form.Control name='password' type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <button className="btn-light fw-bold rounded border fs-5 px-5 py-2" type="submit">
                     Register
-                </Button>
+                </button>
                 <Form.Text className="text-danger">
                     {error}
                 </Form.Text>

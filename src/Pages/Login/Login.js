@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 
@@ -24,15 +23,14 @@ const Login = () => {
         providerLogin(googleProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
             })
             .catch(error => console.error(error))
     }
+
     const handleGithubSignIn = () => {
         providerLogin(githubProvider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
             })
             .catch(error => console.error(error))
     }
@@ -60,12 +58,12 @@ const Login = () => {
 
 
     return (
-        <div className='container'>
-            <h1>Please, Login</h1>
-            <Button onClick={handleGoogleSignIn} className='mb-2 d-block mx-auto' variant='outline-primary'><FaGoogle /> Login with Google</Button>
-            <Button onClick={handleGithubSignIn} variant='outline-dark' className='d-block mx-auto'><FaGithub /> Login with Github</Button>
+        <div className='container w-50 p-5 mt-3 text-white rounded bg-success bg-lighten-sm'>
+            <h1 className='mb-5'>Please, Login</h1>
+            <Button onClick={handleGoogleSignIn} className='mb-2 d-block mx-auto btn-light' ><FaGoogle /> Login with Google</Button>
+            <Button onClick={handleGithubSignIn} className='d-block mx-auto btn-dark'><FaGithub /> Login with Github</Button>
 
-            <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
+            <Form onSubmit={handleSubmit} className='w-75 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control name='email' type="email" placeholder="Enter email" required />
@@ -76,9 +74,9 @@ const Login = () => {
                     <Form.Control name='password' type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <button className="btn-light fw-bold rounded border fs-5 px-5 py-2" type="submit">
                     Login
-                </Button>
+                </button>
                 <Form.Text className="text-danger">
                     {error}
                 </Form.Text>
