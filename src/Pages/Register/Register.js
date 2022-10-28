@@ -41,7 +41,7 @@ const Register = () => {
 
 
     return (
-        <div className='container w-50 px-5 py-4 mt-3 text-white rounded bg-success bg-lighten-sm'>
+        <div className='container w-50 px-5 pt-3 pb-2 mt-3 text-white rounded bg-success bg-lighten-sm'>
             <h1 className='mb-4'>Please, Register</h1>
             <Form onSubmit={handleSubmit} className='w-75 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -65,7 +65,7 @@ const Register = () => {
                 <button className="btn-light fw-bold rounded border fs-5 px-5 py-2" type="submit">
                     Register
                 </button>
-                <Form.Text className="text-danger">
+                <Form.Text className="text-danger fw-bolder bg-light mt-2 d-block rounded">
                     {error}
                 </Form.Text>
             </Form>

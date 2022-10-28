@@ -62,7 +62,7 @@ const Login = () => {
 
 
     return (
-        <div className='container w-50 p-5 mt-3 text-white rounded bg-success bg-lighten-sm'>
+        <div className='container w-50 pt-5 pb-4 px-5 mt-3 text-white rounded bg-success bg-lighten-sm'>
             <h1 className='mb-5'>Please, Login</h1>
             <Button onClick={handleGoogleSignIn} className='mb-2 d-block mx-auto btn-light' ><FaGoogle /> Login with Google</Button>
             <Button onClick={handleGithubSignIn} className='d-block mx-auto btn-dark'><FaGithub /> Login with Github</Button>
@@ -81,7 +81,7 @@ const Login = () => {
                 <button className="btn-light fw-bold rounded border fs-5 px-5 py-2" type="submit">
                     Login
                 </button>
-                <Form.Text className="text-danger">
+                <Form.Text className="text-danger fw-bolder bg-light mt-2 d-block rounded">
                     {error}
                 </Form.Text>
             </Form>
