@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import { FaFilePdf } from "react-icons/fa";
 
 const CourseDetails = () => {
 
@@ -9,6 +10,10 @@ const CourseDetails = () => {
     return (
         <div style={{ width: "50%" }} className="mx-auto my-3">
             <Card >
+                <div className='py-2 d-flex justify-content-end'>
+                    <FaFilePdf className='text-warning me-2'></FaFilePdf>
+                    <span></span>
+                </div>
                 <Card.Img variant="top" src={image_url} className='' />
                 <Card.Body>
                     <Card.Title><h3>{title}</h3></Card.Title>

@@ -1,8 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Image from 'react-bootstrap/Image'
-import { FaRegBookmark, FaShareAlt, FaStar, FaEye } from "react-icons/fa";
+import { FaRegBookmark, FaShareAlt, FaStar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const AllCoursesSummery = ({ course }) => {
