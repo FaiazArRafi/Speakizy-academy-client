@@ -48,7 +48,7 @@ const Header = () => {
                         {
                             user?.uid ?
                                 <>
-                                    <Button variant="info" onClick={handleLogOut}>Log Out</Button>
+                                    <Button variant="info text-white fw-bolder" onClick={handleLogOut}>Log Out</Button>
                                 </>
                                 :
                                 <>

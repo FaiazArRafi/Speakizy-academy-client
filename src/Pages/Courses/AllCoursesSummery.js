@@ -9,7 +9,7 @@ const AllCoursesSummery = ({ course }) => {
     return (
         <div style={{ width: "75%" }} className="mx-auto">
 
-            <Card className="mb-5">
+            <Card className="my-5">
                 <Card.Header className='d-flex justify-content-between align-items-center'>
                     <h2>{title}</h2>
                     <div>
