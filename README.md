@@ -11,7 +11,7 @@ This website was react-bootstrapped with [Create React App]. Firebase and Vercel
  
 * In courses page, you can read about all the languages available and choose your any language to learn. If you want to pick any language then click 'See Details' button.
 * In details page you see the details feature about the course. If you want to enroll in our course then press 'Get Premium Access' and login your with your email & password.
-* In the checkout page you can confirm your enrollment by clicking 'Enroll now'.
+* In the checkout page you can confirm your enrollment by clicking 'Purchase'.
 
 ### Blog
 
