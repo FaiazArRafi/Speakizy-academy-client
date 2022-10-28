@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <div>
             <Navbar bg="light" variant="light">
-                <Container>
+                <Container className='d-flex flex-wrap'>
                     <Navbar.Brand href="">
                         <Image
                             src="https://api.nuget.org/v3-flatcontainer/multiple.languages.translate.text.api/1.0.0/icon"
@@ -31,7 +31,7 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Brand href="/" className='fs-3 fw-bolder'>Speakizy Academy</Navbar.Brand>
 
-                    <Nav className="me-auto">
+                    <Nav className="me-auto d-flex flex-wrap">
                         <Link to={'/'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>Home</Link>
                         <Link to={'/courses'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>Courses</Link>
                         <Link to={'/FAQ'} className='text-dark fw-bolder mt-2 ms-3' style={{ textDecoration: 'none' }}>FAQ</Link>
@@ -43,7 +43,7 @@ const Header = () => {
                         </p>
 
                     </Nav>
-                    <Nav className='d-flex flex-row justify-content-start'>
+                    <Nav className='d-flex flex-row flex-wrap justify-content-start'>
 
                         {
                             user?.uid ?

@@ -16,7 +16,7 @@ const Courses = () => {
             <Container>
                 <Row>
                     <Col lg='9'>
-                        <div className=''>
+                        <div>
                             {
                                 courses.map(course =>
                                     <AllCoursesSummery key={course._id}
