@@ -16,13 +16,14 @@ const Courses = () => {
             <Container>
                 <Row>
                     <Col lg='9'>
-                        <h3>Courses {courses.length}</h3>
-                        {
-                            courses.map(course =>
-                                <AllCoursesSummery key={course._id}
-                                    course={course}></AllCoursesSummery>
-                            )
-                        }
+                        <div className=''>
+                            {
+                                courses.map(course =>
+                                    <AllCoursesSummery key={course._id}
+                                        course={course}></AllCoursesSummery>
+                                )
+                            }
+                        </div>
                     </Col>
                     <Col lg='3'><CourseList></CourseList></Col>
                 </Row>

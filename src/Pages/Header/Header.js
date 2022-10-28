@@ -48,12 +48,11 @@ const Header = () => {
                         {
                             user?.uid ?
                                 <>
-                                    <span>{user?.displayName}</span>
                                     <Button variant="info" onClick={handleLogOut}>Log Out</Button>
                                 </>
                                 :
                                 <>
-                                    <Link to={'/login'} className='me-2 p-2 py-2 px-4 rounded-3 bg-primary text-white fw-bold' style={{ textDecoration: 'none' }}>Login</Link>
+                                    <Link to={'/login'} className='me-2 p-2 py-2 px-4 rounded-3 bg-light border fw-bold' style={{ textDecoration: 'none' }}>Login</Link>
                                     <Link to={'/register'} className='me-2 p-2 py-2 px-4 rounded-3 bg-primary text-white fw-bold' style={{ textDecoration: 'none' }}>Register</Link>
                                 </>
                         }
